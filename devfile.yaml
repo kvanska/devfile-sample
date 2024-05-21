@@ -25,12 +25,12 @@ components:
   - name: kubernetes-deploy
     attributes:
       deployment/replicas: 1
+      deployment/cpuLimit: 100m
       deployment/cpuRequest: 10m
-      deployment/cpuLimit: 15m
-      deployment/memoryRequest: 50Mi
-      deployment/memoryLimit: 55Mi
-      deployment/ephemeral-storageRequest: 10Mi
+      deployment/memoryLimit: 100Mi
+      deployment/memoryRequest: 250Mi
       deployment/ephemeral-storageLimit: 15Mi
+      deployment/ephemeral-storageRequest: 10Mi
       deployment/container-port: 3001
     kubernetes:
       uri: deploy.yaml

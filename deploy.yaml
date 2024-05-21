@@ -20,9 +20,14 @@ spec:
               containerPort: 3001
               protocol: TCP
           resources:
+            limits:
+              ephemeral-storage: 150Mi
+              cpu: '15m'
+              memory: 60Mi
             requests:
-              memory: "50Mi"
-              cpu: "10m"
+              ephemeral-storage: 100Mi
+              cpu: '10m'
+              memory: 50Mi
 ---
 kind: Service
 apiVersion: v1

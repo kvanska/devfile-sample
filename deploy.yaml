@@ -28,6 +28,13 @@ spec:
               ephemeral-storage: 100Mi
               cpu: '10m'
               memory: 50Mi
+          env:
+          - name: http_proxy
+            value: 'http://proxy01.hslu.ch:8080'
+          - name: https_proxy
+            value: 'http://proxy01.hslu.ch:8080'
+          - name: no_proxy
+            value: 'localhost,127.0.0.1,.campus.intern,.hslu.ch'
 ---
 kind: Service
 apiVersion: v1

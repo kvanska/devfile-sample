@@ -1,3 +1,8 @@
+# Set environment variables
+ARG http_proxy=http://proxy01.hslu.ch:8080
+ARG https_proxy=http://proxy01.hslu.ch:8080
+ARG no_proxy=localhost,127.0.0.1,.campus.intern,.hslu.ch
+
 # Install the app dependencies in a full Node docker image
 FROM registry.access.redhat.com/ubi8/nodejs-18:latest
 
